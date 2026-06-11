@@ -1,26 +1,24 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import Button from './components/Button';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import LoginScreen from "./pages/LoginScreen";
+import SignupScreen from "./pages/SignupScreen";
+
+export type RootStackParamList = {
+  Login: undefined;
+  Signup: undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello Yves 👋</Text>
-      <Button />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Signup" component={SignupScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-  },
-  text: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#0e3bab',
-  },
-});
