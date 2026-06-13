@@ -29,7 +29,7 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome Back Yves</Text>
+      <Text style={styles.title}>Welcome Back Foex</Text>
       <Text style={styles.subtitle}>Login to continue</Text>
 
       <TextInput
@@ -124,6 +124,6 @@ const styles = StyleSheet.create({
   link: {
     fontSize: 16,
     color: "#2563EB",
-    fontWeight: "bold",
+    fontWeight: "bolder",
   },
 });
