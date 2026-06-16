@@ -24,7 +24,12 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
       return;
     }
 
-    Alert.alert("Success", "Login successful!");
+    Alert.alert("Success", "Login successful!", [
+      {
+        text: "Continue",
+        onPress: () => navigation.replace("Home"),
+      },
+    ]);
   };
 
   return (
@@ -85,7 +90,7 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    height: 65,
+    height: 64,
     backgroundColor: "#fff",
     borderRadius: 12,
     paddingHorizontal: 20,

@@ -4,6 +4,7 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
+  Image,
 } from "react-native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../App";
@@ -17,10 +18,17 @@ export default function HeroScreen({
 }: HeroScreenProps) {
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}>📱</Text>
+      <Image
+              source={require('../assets/logo.png')}
+              style={{
+                  width: 200,
+                  height: 200,
+                  borderRadius: 100,
+                  }}
+            />
 
       <Text style={styles.title}>
-        Welcome to{"\n"}Personal Finance Trackerr
+        Personal Finance Trackerr
       </Text>
 
       <Text style={styles.subtitle}>
@@ -48,8 +56,9 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    fontSize: 80,
+    fontSize: 90,
     marginBottom: 20,
+    borderRadius: 100,
   },
 
   title: {
