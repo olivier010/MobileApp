@@ -129,6 +129,6 @@ const styles = StyleSheet.create({
   link: {
     fontSize: 16,
     color: "#2563EB",
-    fontWeight: "bolder",
+    fontWeight: "bold",
   },
 });
